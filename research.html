@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?><!-- -*-nxml-*- -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Rich FitzJohn: Research</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700'
+	  rel='stylesheet' type='text/css'/>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="header"></div>
+      <div id="body">
+
+	<h1>About my research</h1>
+
+        <p>
+          I am a computational biologist - I address longstanding
+          biological questions by developing new techniques.
+          Currently my research follows two complementary strands:
+        </p>
+
+        <ol>
+          <li>
+            Understanding variation in the tree of life.  I develop
+            and apply statistical approaches to understand why the
+            tree of life is so uneven: some groups of species are far
+            more diverse than others, and species traits are unevenly
+            distributed.
+          </li>
+          <li>
+            Understanding the processes that generate and maintain
+            diversity.  I am using mathematical and simulation
+            approaches to understand the processes that prevent a
+            "single winner" dominanting ecosystems.
+          </li>
+        </ol>
+
+        <h1>Highlights from selected publications</h1>
+
+        <h2>How much of the world is woody?</h2>
+        <p class="paperinfo">with
+        <a href="http://mwpennell.github.io">Matt Pennell</a>,
+        <a href="http://phylodiversity.net/azanne/">Amy Zanne</a>,
+        <a
+            href="http://www.missouribotanicalgarden.org/plant-scence/research-staff-article/487/stevens-p-f.aspx">Peter Stevens</a>,
+        <a href="http://www.phylodiversity.net/dtank/">Dave Tank</a>
+        and 
+        <a href="http://www.phylodiversity.net/wcornwell/">Will
+        Cornwell</a>
+        </p>
+
+        <p class="ref">
+          Journal of Ecology, 2014. doi:
+          <a
+              href="http://doi.org/10.1111/1365-2745.12260">10.1111/1365-2745.12260</a>
+        </p>
+
+        <p>
+          We tried to answer the simple question of what fraction of
+          the world's plant species are woody: surprising the answer
+          to this is not known.  We surveyed researchers and found a
+          huge range of estimates.  We used a trait database that
+          spanned 12% of plant diversity, and found that due to
+          taxonomic patterns of woodiness, the estimates of woodiness
+          were extremely biased.  We used Monte Carlo (sampling)
+          methods to correct this bias and found that just under half
+          the world's vascular plant species are woody.  Surprisingly
+          this was much higher than estimates from researchers, even
+          with significant botanical training.
+        </p>
+
+        <p>
+          All code and data to reproduce this paper are available on
+          <a href="https://github.com/richfitz/wood">github</a>, and
+          an automatically generated analysis complete with code and
+          figures is available <a
+          href="http://richfitz.github.io/wood/wood.html">here</a>.
+          This project uses <a
+          href="http://travis-ci.org/richfitz/wood">continuous
+          integration</a> to ensure that it is fully reproducible.
+        </p>
+
+        <h2>diversitree: Comparative phylogenetic analyses of
+        diversification in R</h2>
+        <p class="ref">
+          Methods in Ecology and Evolution, 2012. doi:<a href="http://doi.org/10.1111/j.2041-210X.2012.00234.x">10.1111/j.2041-210X.2012.00234.x</a>
+        </p>
+
+        <p>
+          This is the companion paper to my package <a
+          href="http://www.zoology.ubc.ca/prog/diversitree">diversitree</a>.
+          This paper outlines the overall design goals of the package.
+          I introduce a new method, "MuSSE", for partitioning the
+          effects that multiple traits may have on diversification.  I
+          also describe two new algorithms for fitting evolutionary
+          models: a linear time algorithm for fitting continuous trait
+          models based on Brownian Motion (always faster than the
+          traditional cubic-time algorithm based on covariance
+          matrices) and for fitting discrete traits with many levels
+          (linear in the number of levels, rather than quadratic or
+          worse).
+        </p>
+
+        <iframe width="560" height="315" src="//www.youtube.com/embed/vb9mgTwGH9g?rel=0" frameborder="0" allowfullscreen></iframe>
+
+        <p>
+          All code and data to replicate the analysis are available on
+          <a
+              href="https://github.com/richfitz/diversitree/blob/master/pub/example/primates.Rnw">github</a>.
+          The package is available on <a
+          href="http://cran.r-project.org/web/packages/diversitree/">CRAN</a>
+          and on <a
+              href="https://github.com/richfitz/diversitree/">github</a>.
+          Diversitree has now been used in over <a
+          href="http://www.zoology.ubc.ca/prog/diversitree/studies.html">100
+          studies</a>, to answer questions I never dreamt of.
+        </p>
+
+        <h2>Quantitative traits and diversification</h2>
+
+        <p class="ref">Systematic Biology, 2010. doi:<a href="http://doi.org/10.1093/sysbio/syq053">10.1093/sysbio/syq053</a></p>
+        <p>
+          I develop a new method, QuaSSE, to infer the effect of
+          continuous traits such as body size on speciation and
+          extinction rates, while simultaneously modelling the
+          evolution of these traits.  I show that under ideal
+          situations with simulated data, the methods can infer
+          patterns of diversification deep in the past, even while
+          using only extant species data.  I tested a long-standing
+          hypothesis that species tend to become larger in size while
+          large species diversify less rapidly than smaller species
+          using a tree of all primates: I found little support for
+          this hypothesis.
+        </p>
+
+        <!-- TODO: static docs and point at help page -->
+        <p>
+          This method is implemented within <a
+          href="http://www.zoology.ubc.ca/prog/diversitree">diversitree</a>
+          as <code>make.quasse</code>.  The analysis from the paper is
+          replicated within the <a
+          href="http://www.zoology.ubc.ca/prog/diversitree/doc/diversitree-tutorial.pdf#page=23">tutorial</a>
+          (p 23 - 30, <a
+          href="https://github.com/richfitz/diversitree/blob/master/doc/diversitree-tutorial.Rnw#L955">source</a>).
+          This paper won the Systematic Biology "Publishers Award for
+          Excellence in Systematic Research".
+          <!-- TODO: Link to a few studies that have used it -->
+        </p>
+
+        <h2>Estimating trait-dependent speciation and extinction
+        rates from incompletely resolved phylogenies</h2>
+
+        <p class="paperinfo">with
+        <a href="http://waynemaddisonlab.wordpress.com/">Wayne Maddison</a>
+        and
+        <a href="http://www.zoology.ubc.ca/~otto">Sally Otto</a>
+        </p>
+
+        <p class="ref">
+          Systematic Biology, 2009
+          doi:<a
+          href="http://doi.org/10.1093/sysbio/syp067">10.1093/sysbio/syp067</a>
+        </p>
+
+        <p>
+          In this paper I present ideas, algorithms and code for
+          detecting the effect of species traits on rates of
+          speciation and extinction.  This generalised a new method
+          (BiSSE) where only part of the structure of the phylogeny is
+          known.  This relaxes key assumptions in the original method
+          and allowed BiSSE to be used on much broader classes of data
+          than was previously possible.
+        </p>
+
+        <p>
+          This method is implemented within <a
+          href="http://www.zoology.ubc.ca/prog/diversitree">diversitree</a>
+          as <code>make.bisse</code>.  The analysis from the paper is
+          replicated within the <a
+          href="http://www.zoology.ubc.ca/prog/diversitree/doc/diversitree-tutorial.pdf#page=15">tutorial</a>
+          (p 15 - 20, <a
+          href="https://github.com/richfitz/diversitree/blob/master/doc/diversitree-tutorial.Rnw#L616">source</a>).
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
