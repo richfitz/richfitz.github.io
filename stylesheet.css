@@ -185,6 +185,10 @@ p.ref {
     color: #777777;
 }
 
+p.paperinfo a {
+    white-space: nowrap;
+}
+
 .lowerright {
     position:absolute;
     bottom:0;
