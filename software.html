@@ -16,7 +16,8 @@
 
 	<h1>Software</h1>
 
-        I write software for several reasons:
+        Almost all of the software below are R packages.  I write
+        software for several reasons:
 
         <h2>Research outputs designed for resuse</h2>
 
@@ -42,24 +43,109 @@
             profiles from a (now-dated) sequencing technology against
             a known set of species.
           </li>
+
+          <li>
+            <a href="https://github.com/richfitz/phyndr">phyndr</a>:
+            Match phylogenetic and trait data (paper forthcoming).
+          </li>
+
+          <li>
+            <a href="https://github.com/traitecoevo/plant">plant</a>:
+            Simulation model of a forests for exploring trait-driven
+            ecological and evolutionary dynamics.
+          </li>
+
+          <li>
+            <a href="https://github.com/richfitz/traitfill">traitfill</a>:
+            Impute categorical missing data based on taxonomic
+            structure.
+          </li>
         </ul>
 
-        <h2>Documenting research</h2>
+        <h2>Research infrastructure and tools</h2>
 
         <ul>
-        <li>
-          <a href="https://github.com/richfitz/ksi">ksi</a>:
-          Komogorov-Smirnov Importance Statistic
-        </li>
-        <li>
-          <a href="http://www.zoology.ubc.ca/prog/mosaic">mosaic</a>:
-          Fit non-monotonic curves to hybrid zone data.
-        </li>
-        </ul>
+          <li>
+            <a href="https://github.com/richfitz/remake">remake</a>:
+            reproducible build system for R.  This package takes the
+            good ideas from "make" and reimagines them with data
+            analysis in R in mind.
+          </li>
+          <li>
+            <a href="https://github.com/traitecoevo/rrqueue">rrqueue</a>:
+            Scalable distributed job queues with R and Redis.  Based
+            on ideas from <a href="http://python-rq.org/">rq</a> but
+            with an R-ish flavour.
+          </li>
+          <li>
+            <a href="https://github.com/richfitz/storr">storr</a>:
+            Key-value databases, with different backends (memory,
+            disk, Redis).  Includes support for memory caching,
+            content-addressable lookup, indexable serialisation, and
+            fetching externally stored data on demand.
+          </li>
+          <li>
+            <a href="https://github.com/ropensci/RedisAPI">RedisAPI</a>:
+            Automatically generated consistent wrapper around all
+            Redis <a href="redis.io/commands/">commands</a>.
+          </li>
+          <li>
+            <a
+            href="https://github.com/ropensci/RedisHearbeat">RedisHeartbeat</a>:
+            Heartbeat pattern, using Redis: signal that an R process
+            is alive by using an expiring key as a dead man switch.
+            RedisHeartbeat runs on a separate thread so does not block
+            any R calculations.
+          </li>
+          <li>
+            <a href="https://github.com/ropensci/rrlite">rrlite</a>:
+            Interface to <a
+            href="https://github.com/seppo0010/rlite">rlite</a>: a
+            self-contained, serverless, zero-configuration,
+            transactional redis-compatible database engine (rlite is
+            to Redis what SQLite is to mysql).
+          </li>
+          <li>
+            <a href="https://github.com/richfitz/RcppR6">RcppR6</a>:
+            Generate interfaces to C++ classes using R6.  Allows
+            compiled objects to be interacted with dynamically in R as
+            reference (R6) classes.  Includes support for mapping C++
+            templated types onto R's generic (S3) type system.
+          </li>
+          <li>
+            <a href="https://github.com/traitecoevo/dockertest">dockertest</a>:
+            Generate dockerfiles and containers from R package
+            metadata, remake files or from minimal yaml
+            configuration.  Allows offline rapid testing of packages
+            in a clean environment.
+          </li>
+          <li>
+            <a href="https://github.com/richfitz/callr">callr</a>:
+            Simple R -> shell and shell -> R calling.  Run R by
+            writing small json files.  Automatically install missing
+            packages, even from github.  Run shell with output only on
+            error.
+          </li>
+          <li>
+            <a
+            href="https://github.com/traitecoevo/experimentr">experimentr</a>:
+            Control large computational experiments on multiprocessor
+            machines or on HPC infrastructure.
+          </li>
+          <li>
+            <a href="https://github.com/richfitz/drat.builder">drat.builder</a>:
+            Tools to help keep a <a
+            href="https://github.com/eddelbuettel/drat">drat</a>
+            repository up to date.
+          </li>
 
-        <h2>Non-research software</h2>
+          <li>
+            <a href="https://github.com/ropensci/jqr">jqr</a>: R
+            interface to <a
+            href="http://stedolan.github.io/jq/">jq</a>, for
+            manipulating JSON data.  Includes a pipe-based DSL.
+          </li>
 
-        <ul>
           <li>
             <a href="https://github.com/richfitz/sowsear">sowsear</a>:
             Frictionless literate programming: generate knitr files from
@@ -78,32 +164,74 @@
           </li>
         </ul>
 
-        <h2>Things in progress</h2>
+        <h2>Documenting research</h2>
+
+        <ul>
+        <li>
+          <a href="https://github.com/richfitz/ksi">ksi</a>:
+          Komogorov-Smirnov Importance Statistic
+        </li>
+        <li>
+          <a href="http://www.zoology.ubc.ca/prog/mosaic">mosaic</a>:
+          Fit non-monotonic curves to hybrid zone data.
+        </li>
+        </ul>
+
+        <h2>Distributing and versioning of data</h2>
 
         <ul>
           <li>
-            <a href="https://github.com/richfitz/forest">forest</a>:
-            New phylogenetics tree structures in R for faster, easier
-            and more efficient analyses, and for better algorithms by
-            getting the book-keeping out of the way.
+            <a
+            href="https://github.com/wcornwell/taxonlookup">taxonlookup</a>:
+            curated higher-level taxonomy for land plants.
           </li>
-
           <li>
-            <a href="https://github.com/richfitz/ghwiki">ghwiki</a>:
-            Scripts to turn GitHub wikis into an automatic lab notebook.
+            <a
+            href="https://github.com/traitecoevo/baad.data">baad.data</a>:
+            Biomass And Allometry Database (the actual database is <a
+            href="https://github.com/dfalster/baad">baad</a>).
+          </li>
+        </ul>
+
+        <h2>Fun things</h2>
+
+        <ul>
+          <li>
+            <a
+            href="https://gitub.com/richfitz/rainbowrite">rainbowrite</a>:
+            Port of <a
+            href="https://github.com/busyloop/lolcat">lolcat</a> for
+            R.
+          </li>
+          <li>
+            <a href="https://gitub.com/richfitz/rfiglet">rfiglet</a>:
+            Port of <a href="http://www.figlet.org/">figlet</a> for R.
+          </li>
+          <li>
+            <a href="https://gitub.com/richfitz/remoji">remoji</a>:
+            Emoji support for R
           </li>
         </ul>
 
         <h2>Other contributions</h2>
-        <p>
-          I have contributed code to <a
-          href="https://github.com/mwpennell/geiger-v2">geiger</a> (a
-          suite of methods and models for studying evolutionary
-          radiations), <a
-          href="http://cran.r-project.org/web/packages/ape/index.html">ape</a>
-          (analyses of phylogenetics and evolution) and <a
-          href="https://github.com/richfitz/cowsay">cowsay</a> (cowsay
-          with more animals in R).
+        <ul>
+          <li>
+            <a
+            href="https://github.com/mwpennell/geiger-v2">geiger</a>:
+            a suite of methods and models for studying evolutionary
+            radiations.
+          </li>
+          <li>
+            <a
+                href="https://github.com/richfitz/cowsay">cowsay</a>: cowsay
+            with more animals in R.
+          </li>
+          <li>
+            <a href="https://github.com/ropensci/docdbi">docdbi</a>:
+            generic interface for nosql database in R.
+          </li>
+        </ul>
+          <!-- docdbi, jqr, loggr -->
         </p>
       </div>
     </div>
