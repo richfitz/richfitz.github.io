@@ -1,74 +1,291 @@
-<?xml version="1.0" encoding="utf-8" ?><!-- -*-nxml-*- -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
   <head>
     <title>Rich FitzJohn</title>
-    <link rel="stylesheet" href="stylesheet.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700'
-	  rel='stylesheet' type='text/css'/>
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- Styles are from https://terminalcss.xyz/ fetched from
+        https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css on
+        2023-03-24 -->
+    <link rel="stylesheet" href="terminal.min.css"></link>
+    <meta charset="UTF-8"></meta>
   </head>
-  <body>
-    <div id="container-front">
 
-      <img class="lowerright" src="pics/me.png" alt="picture of rich"/>
-      <div id="header"></div>
-      <div id="body-front">
-	<div id="lhs">
-	  <p>
-	    <span class="name">Rich FitzJohn</span> is a research software engineer, specialising in computational biology.  He is interested in breaking down barriers to robust, scalable and reproducible research.
-          </p>
-
-          <p>
-	    He is currently working in the <a
-	    href="https://www.imperial.ac.uk/school-public-health/infectious-disease-epidemiology/">Department
-	    of Infectious Disease Epidemiology</a> at Imperial College
-	    London.  Currently quite a bit of time is spent working
-	    with the <a href="http://www.vaccineimpact.org/">Vaccine
-	    Impact Modelling Consortium</a>.  Previously he worked as a
-	    postdoc at Macquarie University with <a
-	    href="http://bio.mq.edu.au/ecology/westoby/mark.htm">Mark
-	    Westoby</a>, did a PhD with <a
-	    href="http://www.zoology.ubc.ca/~otto">Sally Otto</a> at
-	    the University of British Columbia, and worked at <a
-	    href="http://www.landcareresearch.co.nz/home">Landcare
-	    Research</a>, NZ.
-	  </p>
-
-          <p class="icons">
-            <a href="https://twitter.com/rgfitzjohn" title="twitter"><i class="fa fa-twitter"></i></a>
-            <a href="mailto:rich.fitzjohn@gmail.com" title="email"><i class="fa fa-envelope"></i></a>
-            <a href="https://github.com/richfitz" title="github"><i class="fa fa-github"></i></a>
-            <a href="https://bitbucket.com/richfitz" title="bitbucket"><i class="fa fa-bitbucket"></i></a>
-          </p>
-	</div>
-
-	<div id="rhs">
-	  <ul>
-	    <li>
-	      <a href="software.html">software</a>
-              <br/>
-	      I do science by building software
-	    </li>
-	    <li>
-	      <a href="research.html">research</a>
-	      <br/>
-	      More about when I was researcher
-	    </li>
-	    <li>
-	      <a href="publications.html">publications</a>
-	      <br/>
-	      links, pdfs, data, and code
-	    </li>
-	    <li>
-	      <a href="https://nicercode.github.io">teaching</a>
-              <br/>
-              blog and resources
-	    </li>
-	  </ul>
-	</div>
+  <body class="terminal">
+    <div class="container">
+      <div class="terminal-nav">
+        <header class="terminal-logo">
+          <div class="logo terminal-prompt"><a href="https://terminalcss.xyz" class="no-style">&#128075; Rich FitzJohn</a></div>
+        </header>
+        <nav class="terminal-menu">
+          <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+            <li property="itemListElement" typeof="ListItem"><a href="#writing" property="item" typeof="WebPage" class="menu-item"><span property="name">writing</span></a><meta property="position" content="1"></li>
+            <li property="itemListElement" typeof="ListItem"><a href="#projects" property="item" typeof="WebPage" class="menu-item"><span property="name">projects</span></a><meta property="position" content="2"></li>
+            <li property="itemListElement" typeof="ListItem"><a href="#talks" property="item" typeof="WebPage" class="menu-item"><span property="name">talks</span></a><meta property="position" content="3"></li>
+            <li property="itemListElement" typeof="ListItem"><a href="https://github.com/richfitz" property="item" typeof="WebPage" class="menu-item"><span property="name">code</span></a><meta property="position" content="3"></li>
+          </ul>
+        </nav>
       </div>
+    </div>
+
+    <div class="container">
+      <p>
+       I am a <a href="https://software.ac.uk">Research Software
+          Engineer</a>, and currently run
+        the <a href="https://reside-ic.github.io">RESIDE</a> research
+        software group within
+        the <a href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/">MRC
+          Centre for Global Infectious Disease Analysis</a>. I am excited
+        about ways to break down the barriers between domain experts and
+        code and help people do more science per line of code written.
+      </p>
+
+      <p>
+        Previously, I have
+      </p>
+
+      <ul>
+        <li>
+          developed <a href="https://traitecoevo.github.io/plant/">software</a>
+          to evolve traits
+          in <a href="https://www.journals.uchicago.edu/doi/full/10.1086/714868">virtual
+            tropical forests,</a>
+        </li>
+        <li>
+          designed and implemented new methods
+          for <a href="https://www.zoology.ubc.ca/prog/diversitree/">comparative
+            phylogenetic methods</a>, then explained these methods through
+          the medium
+          of <a href="https://www.youtube.com/watch?v=vb9mgTwGH9g">puppetry</a>,
+        </li>
+        <li>
+          investigated potential environmental impacts of genetically
+          modified crops, which involved hunting turnips from
+          helicopters (and building databases).
+        </li>
+      </ul>
+
+      <h1 id="writing">Writing</h1>
+
+      <p>
+        Occasionally, I blog
+        on <a href="https://reside-ic.github.io/blog/">my group's
+          blog</a>, or contribute
+        to <a href="https://ropensci.org/author/rich-fitzjohn/">rOpenSci's
+          blog</a>. This <a href="https://ropensci.org/blog/2014/06/09/reproducibility/">post
+          from 2014</a> in particular remains very relevant. Academic
+        writing
+        via <a href="https://scholar.google.com/citations?user=v1nVwmsAAAAJ&hl=en">Google
+          Scholar</a>, though I've not actively published for many years
+        now.
+      </p>
+
+      <p>
+        I occasionally tweet
+        as <a href="https://twitter.com/rgfitzohn"><b>@rgfitzjohn</b></a>
+        and am on Mastodon
+        at <a href="https://fosstodon.org/@richfitz"><b>@richfitz@fosstodon.org</b></a>.
+      </p>
+
+      <p>
+        Previously, I wrote a teaching blog at
+        with <a href="https://danielfalster.com/">Daniel Falster</a>
+        called <a href="https://nicercode.github.io/"><b>nicercode</b></a>.
+      </p>
+
+      <h1 id="projects">Projects</h1>
+
+      <p>
+        My current professional work can be found on
+        the <a href="https://reside-ic.github.io/projects">RESIDE</a>
+        pages, and my software can be found
+        on <a href="https://github.com/richfitz">my GitHub page</a>, as
+        well as the
+        organisations <a href="https://github.com/mrc-ide"><b>mrc-ide</b></a>, <a href="https://github.com/vimc"><b>vimc</b></a>
+        and <a href="https://github.com/reside-ic"><b>reside-ic</b></a>.
+      </p>
+
+      <p>Currently I am working on:</p>
+
+      <ul>
+        <li>
+          The next iteration
+          of <a href="https://vaccineimpact.org/orderly"><b>orderly</b></a>,
+          our continually-reproducible reporting framework
+          (as <a href="https://mrc-ide.github.io/outpack"><b>outpack</b></a>
+          and <a href="https://vaccineimpact.org/orderly2"><b>orderly2</b></a>),
+          which will be more powerful and flexible.
+        </li>
+        <li>
+          Our framework for dynamical modelling built around
+          the <a href="https://mrc-ide.github.io/odin"><b>odin</b></a>
+          DSL, <a href="https://mrc-ide.github.io/dust"><b>dust</b></a>
+          simulation engine
+          and <a href="http://mrc-ide.github.io/mcstate"><b>mcstate</b></a>
+          inference package.
+        </li>
+        <li>
+          Designing robust approaches to deploy research software to the web.
+        </li>
+      </ul>
+
+      <p>Active projects that are more personal include</p>
+      <ul>
+        <li>
+          <a href="https://richfitz.github.io/redux"><b>redux</b></a>,
+          the most fully featured <a href="https://redis.io">Redis</a>
+          client for R.
+        </li>
+        <li>
+          <a href="https://richfitz.github.io/stevedore"><b>stevedore</b></a>,
+          a complete <a href="https://docker.io">docker</a> client for
+          R, automatically generated from the docker OpenAPI
+          specification.
+        </li>
+        <li>
+          <a href="https://richfitz.github.io/thor"><b>thor</b></a>,
+          a very fast key-value store for R, implemented
+          using <a href="https://github.com/LMDB/lmdb">lmdb</a>.
+        </li>
+      </ul>
+
+      <p>Very occasionally, I code outside of work:</p>
+
+      <ul>
+        <li>
+          <a href="https://richfitz.github.io/rainbowrite"><b>rainbowrite</b></a>
+          - more colourful replacements to <b>message</b>
+          and <b>cat</b>, inspired
+          by <a href="https://github.com/busyloop/lolcat"><b>lolcat</b></a>.
+        </li>
+        <li>
+          <a href="https://richfitz.github.io/stegasaur"><b>stegasaur</b></a>
+          - encode arbitrary R objects in cat pictures.
+        </li>
+        <li>
+          <a href="https://richfitz.github.io/rfiglet"><b>rfiglet</b></a>
+          - a complete, pure-R, implementation of
+          the <a href="https://en.wikipedia.org/wiki/FIGlet">FIGlet</a>
+          system for fancy terminal writing.
+        </li>
+      </ul>
+
+      <p>
+        I am a huge fan of <a href="https://adventofcode.com">Advent of
+          Code</a>, and we use this to expose Centre researchers to
+        programming concepts each December:
+      </p>
+
+      <ul>
+        <li><a href="https://github.com/richfitz/advent-of-code">Solutions
+            to several years in R</a>.</li>
+        <li><a href="https://github.com/richfitz/advent-of-rust">Progress
+            solving 2022 in Rust</a>.</li>
+      </ul>
+
+      <p>Previous projects include:</p>
+      <ul>
+        <li><a href="https://www.zoology.ubc.ca/prog/diversitree/"><b>diversitree</b></a> - a large suite of phylogenetic methods, developed and implemented during my PhD. No longer in active development but still in wide use</li>
+        <li><a href="https://cran.r-project.org/web/packages/geiger/index.html"><b>geiger</b></a>, <a href="https://github.com/mwpennell/arbutus"><b>arbutus</b></a> - packages with <a href="https://mwpennell.ca/">Matt Pennell</a> for comparative phylogenetics.</li>
+        <li><a href="https://traitecoevo.github.io/plant/"><b>plant</b></a>, a framework for eco-evolutionary modelling with <a href="https://danielfalster.com/">Daniel Falster</a>, still under development in his lab</li>
+        <li><a href="https://github.com/richfitz/TRAMPR"><b>TRAMPR</b></a>, a package for analysing T-RFLP data in fungal communities before the advent of next generation sequencing. My first publicly released R package, and still in use after more than 15 years.</li>
+      </ul>
+
+      <h1 id="talks">Talks</h1>
+
+      <p>
+        I'm always interested in speaking opportunities, especially
+        around reproducibility, software processes in multidisciplinary
+        teams or directly on any of the projects above -
+        please <a href="mailto:rich.fitzjohn@gmail.com">get in touch</a>.
+      </p>
+
+      <p>Some representative talks:</p>
+
+      <ul>
+        <li>2023 <a href="https://warwick.ac.uk/research/data-science/warwick-data/news/events/research-software-engineering-workshop/">Research Software Engineering in Data and AI workshop</a>, Warwick University/Alan Turing Institute - <a href="https://docs.google.com/presentation/d/1AMYL1ui4aKQt75NYKoIR9ERy2-R0KO6cpHacWuIBi2c/present?usp=sharing">slides</a>
+          <ul>
+            <li>Our approach to handling ever changing data streams
+              during the UK COVID-19 response, creating reproducible
+              pipelines with automatic provenance tracking.</li>
+        </ul></li>
+        <li>2022 <a href="https://rslondon.ac.uk/rslse2022/">RSLondonSE</a> - <a href="https://docs.google.com/presentation/d/1P78g4LFvNClsPaADGAf8RWiiO4NcchMwSiOJYlnu_44/present?usp=sharing">slides</a>
+          <ul>
+            <li>An overview of the technologies used in the UK COVID-19
+              response, from the simulation and inference tools to our
+              approach to data management and reproducibility.</li>
+        </ul></li>
+        <li>
+          2020 <a href="https://www.meetup.com/bioinformatics-london/events/ksqwtmybccbnc/">Bioinformatics
+          London</a> (b2b with <a href="https://www.matt-dray.com/">Matt Dray</a>)- <a href="talks/2020-bioinformatics-london.pdf">slides</a>
+          <ul>
+            <li>
+              On the eve of the COVID-19 pandemic, my last in person
+              talk for over two years with an ominous graph showing
+              growth in infection numbers. The next iteration of my
+              reproducibility/<a href="https://vaccineimpact.org/orderly"><b>orderly</b></a>
+              talk.
+            </li>
+          </ul>
+        </li>
+        <li>
+          2019 <a href="https://ropensci.org/blog/2019/11/12/commcall-dec2019/">rOpenSci Community call on testing</a> - <a href="talks/2019-ropensci.pdf">slides</a>, <a href="https://ropensci.org/commcalls/2019-12-05">recording and resources</a>
+          <ul>
+            <li>A tutorial-style presentation and discussion on best use
+              of software testing for those new to the idea, or those who
+              struggle to effectively integrate it into their
+              workflows.</li>
+          </ul>
+        </li>
+        <li>
+          2019 <a href="https://www.r-project.org/conferences/useR-2019/">UseR! Toulouse</a>
+          - <a href="talks/2019-user.pdf">slides</a>, <a href="https://www.youtube.com/watch?v=R0GHyFd3k8Q">video</a>
+          <ul>
+            <li>
+              Description of odin, focusing on solving complex systems
+              of differential equations. At this point we were pleased
+              with the system, but had no idea how it would change over
+              the next 12 months!
+            </li>
+          </ul>
+        </li>
+        <li>2019 <a href="https://rslondon.ac.uk/rslondonse-2019/">RSLondonSE</a> - <a href="talks/2019-rslondon.pdf">slides</a>
+          <ul>
+            <li>
+              Challenges in reproducible research, and how simple
+              workflows can help. My first attempt at describing the
+              problem
+              that <a href="https://vaccineimpact.org/orderly"><b>orderly</b></a>
+              tries to solve.
+            </li>
+          </ul>
+        </li>
+        <li>2018 <a href="https://www.meetup.com/oxford-r-user-group/events/247901095/">Oxford R User Group</a> - <a href="talks/2018-oxford-rug.pdf">slides</a>
+          <ul>
+            <li>A discussion of three projects where exploiting
+              peculiarities of the R language (such as “non standard
+              evaluation”) can build highly expressive user
+              interfaces. Discusses <a href="https://docs.ropensci.org/cyphr"><b>cyphr</b></a>, <a href="https://mrc-ide.github.io/odin"><b>odin</b></a>
+              and <a href="https://richfitz.github.io/stevedore"><b>stevedore</b></a>.</li>
+        </ul></li>
+        <li>2014 <a href="https://www.meetup.com/r-users-sydney/events/199742542/">Sydney Users of R Forum (SURF)</a> - <a href="talks/2014-surf.pdf">slides</a>
+          <ul>
+            <li>My first public attempt to outline practical issues
+              facing researchers trying to work in a reproducible way,
+              outlining the tools they might use and challenges they might
+              face.
+            </li>
+          </ul>
+        </li>
+        <li>2013 <a href="https://eseb.org/wp-content/uploads/2018/08/2013_Program.pdf">ESEB keynote</a> - <a href="talks/2013-eseb.pdf">slides</a>
+          <ul>
+            <li>
+              One of the last science-focused talks I ever gave, in
+              receipt of
+              the <a href="https://eseb.org/prizes-funding/john-maynard-smith-prize/">John
+                Maynard Smith prize</a>.
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
